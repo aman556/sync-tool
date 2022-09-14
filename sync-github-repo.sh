@@ -2,8 +2,8 @@
 
 syncingBranch=$1
 
-git fetch upstream upstream/"${syncingBranch}"
+git fetch upstream "${syncingBranch}"
 
 git checkout -b "${syncingBranch}"
 
-git rebase upstream/"${syncingBranch}"/"${syncingBranch}"
+git rebase upstream/"${syncingBranch}"
