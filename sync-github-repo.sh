@@ -1,10 +1,9 @@
 #!/bin/bash
 
-upstream=$1
-syncingBranch=$2
+syncingBranch=$1
 
-git fetch "${upstream}" "${upstream}"/"${syncingBranch}"
+git fetch upstream upstream/"${syncingBranch}"
 
 git checkout -b "${syncingBranch}"
 
-git rebase "${upstream}"/"${syncingBranch}"/"${syncingBranch}"
+git rebase upstream/"${syncingBranch}"/"${syncingBranch}"
