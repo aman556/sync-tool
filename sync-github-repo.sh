@@ -27,7 +27,7 @@ git checkout "${midstreamBranch}" || git checkout -b "${midstreamBranch}"
 # Only covered the case when upstream is ahead of midstream
 # ToDo: Cover the below case
 #       - When midstream and upstream both have some commits 
-#         then have resolve the merg conflict first
+#         then have to resolve the merge conflicts first
 if [ -n "$(git diff remotes/upstream/"${upstreamBranch}" "${midstreamBranch}")" ]
 then
     git merge remotes/upstream/"${upstreamBranch}"
